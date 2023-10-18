@@ -1,0 +1,68 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Coolors Exported Palette - https://coolors.co/000114-013b60-9fb6d6-599bba-ffffff */
+/* CSS HEX */
+/* CSS HSL */
+/* SCSS HEX */
+/* SCSS HSL */
+/* SCSS RGB */
+/* SCSS Gradient */
+#main-header #main-logo {
+  width: 48px;
+  height: 48px;
+  margin-top: 21px;
+}
+#main-header .jon {
+  font-size: 45px;
+  margin-top: 19px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  #main-header #main-logo {
+    width: 45px;
+    height: 45px;
+    margin-top: 33px;
+  }
+  #main-header .jon {
+    font-size: 34px;
+    margin-top: 44px;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #main-header #main-logo {
+    width: 67px;
+    height: 67px;
+    margin-top: 33px;
+  }
+  #main-header .jon {
+    font-size: 56px;
+    margin-top: 44px;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #main-header #main-logo {
+    width: 107px;
+    height: 107px;
+    margin-top: 33px;
+  }
+  #main-header .jon {
+    font-size: 70px;
+    margin-top: 41px;
+    text-align: center;
+  }
+}
+.hidden {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
