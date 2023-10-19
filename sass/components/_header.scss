@@ -1,13 +1,29 @@
 @use '../abstracts' as a;
 
+#hero div {
+    grid-column: 1/-1;
+    grid-row: 1/1;
+    justify-self: center;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+#hero-main .grid-con {
+    grid-column: 1/-1;
+    grid-row: 1/3;
+}
+
 #main-header {
-    // background-color: #fff;
-    // margin-bottom: 20px;
+
+    grid-column: 1/-1;
+    grid-row: 1/1;
+
 
     #main-logo {
         width: 48px;
         height: 48px;
         margin-top: 21px;
+        justify-self: left;
     }
 
     .jon {
@@ -18,29 +34,67 @@
         font-weight: bold;
     }
 
-    // #main-nav {
-    //     margin-top: 40px;
-    // }
-
-    // #main-nav ul {
-    //     display: flex;
-    //     list-style: none;
-    //     justify-content: center;
-    //     padding: 0;
-    //     margin: 20px 0 0 0;
-    // }
-
-    // #main-nav ul li {
-    //     margin-right: 20px;
-    //     &:last-child {
-    //         margin-right: 0;
-    //     }
-    // }
-
-    // #main-nav a {
-    //     text-decoration: none;
-    // }
 }
+
+#main-nav {
+
+    button {
+        background: url(../images/hamburger.svg) no-repeat;
+        border: 0;
+        width: 25px;
+        height: 30px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        transition: all .5s ease;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 80px;
+    }
+
+    ul li a {
+        display: block;
+        padding: 10px 0 10px 0;
+        text-align: center;
+        color: #ffffff;
+        font-size: 30px;
+        transition: all 0.3s ease;
+    }
+
+    ul li a:hover {
+        color: a.$first-color;
+    }
+
+    ul li {
+        margin-bottom: 20px;
+    }
+
+    button.expanded {
+        background: url(../images/hamburger-white.svg) center no-repeat;
+        transform: rotate(90deg);
+        position: absolute;
+        z-index: 3;
+    }
+}
+ 
+#burger-con {
+    display: none;
+}
+ 
+#burger-con.slide-toggle {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background: #707070;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
 
 @media screen and (min-width: 768px) {
     #main-header {
