@@ -49,3 +49,62 @@
           url('#{$file-path}.woff2') format('woff2')
       }
   }
+
+  @mixin menuTitle {
+      font-size: 45px;
+      font-weight: bold;
+      @media screen and (min-width: 768px) {
+            font-size: 85px;
+      }
+  }
+
+  @mixin projectTitle {
+      font-size: 20px;
+      font-weight: bold;
+      @media screen and (min-width: 768px) {
+            font-size: 60px;
+      }
+  }
+
+  @mixin projectSubTitle {
+      font-size: 18px;
+      font-weight: 600;
+      @media screen and (min-width: 768px) {
+            font-size: 45px;
+      }
+  }
+
+  @mixin solutionTitle {
+      font-size: 16px;
+      font-weight: bold;
+      @media screen and (min-width: 768px) {
+            font-size: 40px;
+      }
+  }
+
+  @mixin recBox($color, $bgc) {
+      color: $color;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: $bgc  ;
+      padding: 5px 5px;
+      @media screen and (min-width: 768px) {
+            font-size: 40px;
+            padding: 10px 10px;
+      }
+  }
+
+  @mixin ovalBox {
+      border-radius: 10%;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: a.$black;
+      padding: 5px 5px;
+      @media screen and (min-width: 768px) {
+            font-size: 40px;
+            padding: 10px 10px;
+      }
+  }
