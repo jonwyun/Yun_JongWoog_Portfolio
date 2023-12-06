@@ -1,3 +1,6 @@
+@use '../abstracts' as a;
+@use '../abstracts/mixins' as m;
+
 .hidden {
     display: none;
 }
@@ -7,7 +10,67 @@ a {
     transition: all .5s ease-in-out;
 }
 
-.hero img {
-    width: 300px;
-    height: 400px;
+#m-hero {
+    img {
+        grid-column: 1/-1;
+        grid-row: 1/1;
+        justify-self: center;
+    }
+    .grid-con {
+        grid-column: 2/3;
+        grid-row: 1/1;
+        margin: 0;
+        align-items: center;
+    }
+}
+
+.hero-main {
+    height: 100%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+.hero-title  p {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-color: a.$blue;
+    -webkit-text-stroke-width: 2.00px;
+    margin-bottom: 50px;
+}
+
+#hero {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    #m-hero {
+        display: none;
+    }
+
+    #hero {
+        display: grid;
+        align-items: center;
+    }
+
+    .hero-main {
+        margin-top: 50px;
+    }
+    
+    #profile {
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-title  p {
+        font-size: 45px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .hero-title  p {
+        font-size: 85px;
+    }
 }
