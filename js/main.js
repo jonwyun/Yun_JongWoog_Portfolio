@@ -1,7 +1,4 @@
 (() => {
-    console.log("Arrow iffe called");
-
-    gsap.from("#name", 3, {x:0, y:150, autoAlpha: 0, ease: Bounce.easeOut});
 
     let button = document.querySelector("#button");
     let burgerCon = document.querySelector("#burger-con");
@@ -12,6 +9,9 @@
     };
 
     button.addEventListener("click", burgerMenu, false);
+
+    gsap.from("#burger-con", 1, {opacity:0, delay:0.5, x:-400, ease:"power2.out"});
+    gsap.from(".jon", 1, {opacity:0, scale:5, delay:0.5, y:200, ease:"power2.out"});
 
 })();
 

@@ -15,36 +15,38 @@
 </head>
 <body>
     <h1 class="hidden">Welcome to Jon's Portfolio Website</h1>
-    <div id="hero" class="full-width-grid-con">
-        <div id="hero-main">
-            <img src="images/hero-mobile-sample.jpeg" alt="mobile" width="430">
+    
+    <header class="grid-con" id="main-header">
+        <h2 class="hidden">Top Navigation</h2>
+        <div class="col-span-1 m-col-span-1 l-col-span-1 xl-col-span-1" id="main-logo">
+            <a href="index.html">
+                <img src="images/logo4x.png" alt="logo">
+            </a>
         </div>
-        <header class="grid-con" id="main-header">
-            <h2 class="hidden">Top Navigation</h2>
-            <div class="col-span-1 m-col-span-1 l-col-span-1 xl-col-span-1" id="main-logo">
-                <a href="index.html">
-                    <img src="images/logo4x-white.png" alt="logo">
-                </a>
+        <div class="col-span-2 m-col-span-3 l-col-span-3 xl-col-span-3" id="name">
+            <p class="jon">Jon Yun</p>
+        </div>
+        <nav class="col-span-1 m-col-start-6 m-col-end-13 l-col-start-7 l-col-end-13" id="main-nav">
+            <h3 class="hidden">Main Navigation</h3>
+            <button id="button"></button>
+            <div id="burger-con">
+                <ul>
+                    <li><a href="index.html"><span>&#123;</span>Home<span>&#125;</span></a></li>
+                    <li><a href="project.html"><span>&#123;</span>Project<span>&#125;</span></a></li>
+                    <li><a href="about.html"><span>&#123;</span>About<span>&#125;</span></a></li>
+                    <li><a href="contact.php"><span>&#123;</span>Contact<span>&#125;</span></a></li>
+                </ul>
             </div>
-            <div class="col-span-2 m-col-span-3 l-col-span-3 xl-col-span-3" id="name">
-                <p class="jon">Jon Yun</p>
-            </div>
-            <nav class="col-span-1 m-col-span-1 l-col-start-4 l-col-end-10" id="main-nav">
-                <h3 class="hidden">Main Navigation</h3>
-                <button id="button"></button>
-                <div id="burger-con">
-                    <ul>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-
-        </header>
-    </div>
+        </nav>
+    </header>
+    
     <main>
+        <div class="full-width-grid-con">
+            <div class="hero">
+                <img src="images/iceberg.svg" alt="iceberg">
+            </div>
+            <p>There is always more than meets the eye</p>
+        </div>
 
     </main>
 
