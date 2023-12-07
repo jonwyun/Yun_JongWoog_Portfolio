@@ -3,6 +3,7 @@
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
 
+//hamburger menu    
     let button = document.querySelector("#button");
     let burgerCon = document.querySelector("#burger-con");
 
@@ -13,15 +14,16 @@
 
     button.addEventListener("click", burgerMenu, false);
 
+//header animation
     gsap.from("#burger-con", {opacity:0, duration:2.5, delay:0.5, x:-400, ease:"expo.out"});
     gsap.from(".jon", {opacity:0, scale:5, duration:2.5, delay:0.5, y:200, ease:"expo.out"});
 
+//hero image animation
+    const mobileIs = window.innerWidth < 768;
 
-    const isMobile = window.innerWidth < 768;
-
-    if (isMobile) {
-    const mobileTl = gsap.timeline().from("#m-profile", { opacity: 0 });
-    console.log("Mobile Timeline created");
+    if (mobileIs) {
+    const mobileTl = gsap.timeline().from("#m-profile", { opacity: 0, ease:"expo.out" });
+    // console.log("Mobile Timeline created");
 
     ScrollTrigger.create({
         animation: mobileTl,
@@ -30,17 +32,17 @@
         end: "bottom bottom",
         scrub: true,
         pin: true,
-        pinSpacing: false,
+        pinSpacing: true,
         markers: true,
         anticipatePin: 1
     });
-    console.log("Mobile ScrollTrigger created");
+    // console.log("Mobile ScrollTrigger created");
     } else {
     const mobileElements = document.querySelectorAll("#m-profile, #mobile");
     mobileElements.forEach(element => element.remove());
 
-    const desktopTl = gsap.timeline().from("#profile", { opacity: 0 });
-    console.log("Desktop Timeline created");
+    const desktopTl = gsap.timeline().from("#profile", { opacity: 0, ease:"expo.out" });
+    // console.log("Desktop Timeline created");
 
     ScrollTrigger.create({
         animation: desktopTl,
@@ -53,7 +55,7 @@
         markers: true,
         anticipatePin: 1
     });
-    console.log("Desktop ScrollTrigger created");
+    // console.log("Desktop ScrollTrigger created");
     }
 
 

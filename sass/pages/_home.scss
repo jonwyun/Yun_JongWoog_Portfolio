@@ -21,17 +21,27 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 100vh;
     img {
         grid-column: 1/-1;
         grid-row: 1/1;
         justify-self: center;
     }
     .grid-con {
-        grid-column: 2/3;
+        grid-column: 1/-1;
         grid-row: 1/1;
         margin: 0;
         align-items: center;
+    }
+}
+
+#m-profile {
+    background-color: #fff;
+    img {
+        grid-row: 1/1;
+    }
+    .grid-con {
+        grid-row: 2/2;
     }
 }
 
@@ -41,7 +51,7 @@ a {
     margin-top: 30px;
 }
 
-.hero-title  p {
+.hero-title {
     text-align: center;
     font-size: 35px;
     font-weight: bold;
@@ -51,8 +61,39 @@ a {
     margin-bottom: 50px;
 }
 
+.profile-title {
+    text-align: center;
+    .profile-name {
+        font-size: 50px;
+        font-weight: 300;
+        margin-top: 40px;
+        span {
+            font-weight: bold;
+        }
+    }
+    .role-1 {
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 20px;
+        span {
+            color: a.$pink;
+        }
+    }
+    .role-2 {
+        color: a.$green;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
+
 #hero, #profile {
     display: none;
+}
+
+// Project section
+#menu-title {
+    @include m.menuTitle;
+    margin-top: 100px;
 }
 
 @media screen and (min-width: 768px) {
@@ -85,19 +126,58 @@ a {
     .hero-main {
         margin-top: 50px;
     }
+    .profile-title {
+        .profile-name {
+            font-size: 50px;
+        }
+        .role-1 {
+            font-size: 25px;
+            margin-top: 40px;
+        }
+        .role-2 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    .hero-title  p {
+    .hero-title {
         font-size: 45px;
+    }
+    .profile-title {
+        .profile-name {
+            font-size: 60px;
+        }
+        .role-1 {
+            font-size: 30px;
+            margin-top: 40px;
+        }
+        .role-2 {
+            font-size: 25px;
+            margin-top: 20px;
+        }
     }
 }
 
 @media screen and (min-width: 1920px) {
-    .hero-title  p {
+    .hero-title {
         font-size: 85px;
     }
     #desktop-tablet {
         margin-top: 100px;
+    }
+    .profile-title {
+        .profile-name {
+            font-size: 100px;
+        }
+        .role-1 {
+            font-size: 50px;
+            margin-top: 50px;
+        }
+        .role-2 {
+            font-size: 37px;
+            margin-top: 30px;
+        }
     }
 }
