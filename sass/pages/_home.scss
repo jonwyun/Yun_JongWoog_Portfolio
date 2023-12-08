@@ -12,7 +12,7 @@ a {
 
 #mobile {
     position: relative;
-    width: 100%; 
+    width: 100vw;
     height: 100vh;
 }
 
@@ -20,12 +20,15 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    justify-self: center;
     img {
         grid-column: 1/-1;
         grid-row: 1/1;
+        height: 450px;
         justify-self: center;
+        margin-top: 50px;
     }
     .grid-con {
         grid-column: 1/-1;
@@ -41,15 +44,15 @@ a {
         grid-row: 1/1;
     }
     .grid-con {
-        grid-row: 2/2;
+        grid-row: 1/1;
     }
 }
 
-.hero-main {
-    height: 100%;
-    object-fit: cover;
-    margin-top: 30px;
-}
+// .hero-main {
+//     height: 100%;
+//     object-fit: cover;
+//     margin-top: 30px;
+// }
 
 .hero-title {
     text-align: center;
@@ -58,7 +61,6 @@ a {
     -webkit-text-fill-color: white;
     -webkit-text-stroke-color: a.$blue;
     -webkit-text-stroke-width: 2.00px;
-    margin-bottom: 50px;
 }
 
 .profile-title {
@@ -93,7 +95,57 @@ a {
 // Project section
 #menu-title {
     @include m.menuTitle;
-    margin-top: 100px;
+}
+
+.category-title {
+    display: flex;
+    margin-top: 60px;
+    align-items: center;
+    img {
+        width: 20px;   
+        margin-right: 10px;
+    }
+}
+
+.rec-box {
+    @include m.recBox(white, a.$black);
+}
+
+.project-title {
+    @include m.projectTitle;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    span {
+        font-weight: 300;
+    }
+}
+
+.yellow {
+    color: a.$yellow;
+}
+.pink {
+    color: a.$pink;
+}
+.blue {
+    color: a.$blue;
+}
+
+.body-text {
+    @include m.bodyText;
+    margin-bottom: 60px;
+}
+  
+.swing {
+    transform-origin: bottom center;
+}
+
+.oval-box {
+    text-align: center;
+    button {
+        @include m.ovalBox;
+        display: inline-block;
+        cursor: pointer;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -117,6 +169,9 @@ a {
     }
     #profile {
         background-color: white;
+        img {
+            height: 320px;
+        }
 
     }
     #m-hero, #m-profile {
@@ -158,6 +213,11 @@ a {
             margin-top: 20px;
         }
     }
+    #profile img {
+            height: 420px;
+    }
+
+
 }
 
 @media screen and (min-width: 1920px) {
@@ -180,4 +240,8 @@ a {
             margin-top: 30px;
         }
     }
+    #profile img {
+        height: 700px;
+        padding-bottom: 160px;
+}
 }

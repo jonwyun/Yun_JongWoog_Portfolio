@@ -54,15 +54,21 @@
       font-size: 45px;
       font-weight: bold;
       text-align: center;
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 1200px) {
+            font-size: 55px;
+      }
+      @media screen and (min-width: 1920px) {
             font-size: 85px;
       }
   }
 
   @mixin projectTitle {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 1200px) {
+            font-size: 35px;
+      }
+      @media screen and (min-width: 1920px) {
             font-size: 60px;
       }
   }
@@ -70,7 +76,10 @@
   @mixin projectSubTitle {
       font-size: 18px;
       font-weight: 600;
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 1200px) {
+            font-size: 25px;
+      }
+      @media screen and (min-width: 1920px) {
             font-size: 45px;
       }
   }
@@ -78,34 +87,57 @@
   @mixin solutionTitle {
       font-size: 16px;
       font-weight: bold;
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 1200px) {
+            font-size: 20px;
+      }
+      @media screen and (min-width: 1920px) {
             font-size: 40px;
       }
+  }
+
+  @mixin bodyText {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 25px;
+      @media screen and (min-width: 1200px) {
+            font-size: 18px;
+            line-height: 27px;
+      }
+      @media screen and (min-width: 1920px) {
+            font-size: 25px;
+            line-height: 35px;
+      }    
   }
 
   @mixin recBox($color, $bgc) {
       color: $color;
       text-align: center;
+      font-family: 'Ubuntu', sans-serif;
       font-size: 18px;
       font-weight: bold;
       background-color: $bgc  ;
-      padding: 5px 5px;
-      @media screen and (min-width: 768px) {
+      padding: 5px 10px 5px 10px;
+      @media screen and (min-width: 1200px) {
+            font-size: 20px;
+      }
+      @media screen and (min-width: 1920px) {
             font-size: 40px;
-            padding: 10px 10px;
       }
   }
 
   @mixin ovalBox {
-      border-radius: 10%;
+      border-radius: 2em;
       color: white;
       text-align: center;
+      font-family: 'Ubuntu', sans-serif;
       font-size: 18px;
       font-weight: bold;
-      background-color: a.$black;
-      padding: 5px 5px;
-      @media screen and (min-width: 768px) {
+      background-color: black;
+      padding: 5px 30px 5px 30px;
+      @media screen and (min-width: 1200px) {
+            font-size: 20px;
+      }
+      @media screen and (min-width: 1920px) {
             font-size: 40px;
-            padding: 10px 10px;
       }
   }

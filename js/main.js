@@ -23,7 +23,6 @@
 
     if (mobileIs) {
     const mobileTl = gsap.timeline().from("#m-profile", { opacity: 0, ease:"expo.out" });
-    // console.log("Mobile Timeline created");
 
     ScrollTrigger.create({
         animation: mobileTl,
@@ -32,17 +31,15 @@
         end: "bottom bottom",
         scrub: true,
         pin: true,
-        pinSpacing: true,
-        markers: true,
+        pinSpacing: false,
+        markers: false,
         anticipatePin: 1
     });
-    // console.log("Mobile ScrollTrigger created");
     } else {
     const mobileElements = document.querySelectorAll("#m-profile, #mobile");
     mobileElements.forEach(element => element.remove());
 
     const desktopTl = gsap.timeline().from("#profile", { opacity: 0, ease:"expo.out" });
-    // console.log("Desktop Timeline created");
 
     ScrollTrigger.create({
         animation: desktopTl,
@@ -55,13 +52,25 @@
         markers: true,
         anticipatePin: 1
     });
-    // console.log("Desktop ScrollTrigger created");
     }
 
-
-
-
-
+//Project section
+    gsap.to(".swing", {
+        keyframes: [
+          { rotate: 0 },
+          { rotate: -15, offset: 0.33 },
+          { rotate: 15, offset: 0.66 },
+          { rotate: 0 }
+        ],
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".project-title",
+          start: "top center",
+          end: "bottom top",
+          markers: false,
+          scrub: 1,
+        },
+    });
 
 
 })();
