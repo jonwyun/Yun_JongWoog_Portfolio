@@ -1,10 +1,6 @@
 @use '../abstracts' as a;
 @use '../abstracts/mixins' as m;
 
-.hidden {
-    display: none;
-}
-
 a {
     text-decoration: none;
     transition: all .5s ease-in-out;
@@ -132,21 +128,34 @@ a {
 
 .body-text {
     @include m.bodyText;
-    margin-bottom: 60px;
+}
+
+#swing-image {
+    margin-top: 60px;
 }
   
 .swing {
-    transform-origin: bottom center;
+    transform-origin: center;
 }
 
-.oval-box {
+.oval-box-spacing {
     text-align: center;
-    button {
-        @include m.ovalBox;
-        display: inline-block;
-        cursor: pointer;
+    margin-top: 50px;
+    a:hover {
+        background-color: white;
+          color: black;
+          border: 1px solid black;  
+          cursor: pointer;
     }
 }
+.oval-box {
+    @include m.ovalBox;
+}
+.hover {
+    transition: background-color 0.5s ease;
+}
+    
+
 
 @media screen and (min-width: 768px) {
     #desktop-tablet {
@@ -194,6 +203,21 @@ a {
             margin-top: 20px;
         }
     }
+    .swing {
+        height: 300px;
+    }
+    #swing-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        img {
+            max-width: 100%;
+        }
+    }
+    .oval-box-spacing {
+        text-align: left;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -215,6 +239,9 @@ a {
     }
     #profile img {
             height: 420px;
+    }
+    .category-title {
+        margin-top: 100px;
     }
 
 
@@ -243,5 +270,19 @@ a {
     #profile img {
         height: 700px;
         padding-bottom: 160px;
-}
+    }
+    .category-title {
+        margin-top: 120px;
+        img {
+            width: 30px;   
+            margin-right: 20px;
+        }
+    }
+    .project-title {
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+    .swing {
+        height: 500px;
+    }
 }

@@ -1,0 +1,30 @@
+@use '../abstracts' as a;
+@use '../abstracts/mixins' as m;
+
+.project-sub-title { 
+    @include m.projectSubTitle;
+}
+
+#project-sub-title-etc {
+    margin-bottom: 15px;
+}
+
+.my-role, .tools, .period {
+    h3 {
+        margin-left: 10px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    p {
+        margin-left: 22px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: 300; 
+    }
+}
+
+#project-sub-title-margin {
+    margin-bottom: 30px;
+}

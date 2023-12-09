@@ -65,22 +65,25 @@
   @mixin projectTitle {
       font-size: 18px;
       font-weight: bold;
+      @media screen and (min-width: 768px) {
+            font-size: 25px;
+      }
       @media screen and (min-width: 1200px) {
             font-size: 35px;
       }
       @media screen and (min-width: 1920px) {
-            font-size: 60px;
+            font-size: 45px;
       }
   }
 
   @mixin projectSubTitle {
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 400;
       @media screen and (min-width: 1200px) {
-            font-size: 25px;
+            font-size: 20px;
       }
       @media screen and (min-width: 1920px) {
-            font-size: 45px;
+            font-size: 40px;
       }
   }
 
@@ -88,56 +91,60 @@
       font-size: 16px;
       font-weight: bold;
       @media screen and (min-width: 1200px) {
-            font-size: 20px;
+            font-size: 18px;
       }
       @media screen and (min-width: 1920px) {
-            font-size: 40px;
+            font-size: 30px;
       }
   }
 
   @mixin bodyText {
       font-size: 16px;
       font-weight: 300;
-      line-height: 25px;
+      line-height: 1.5em;
       @media screen and (min-width: 1200px) {
             font-size: 18px;
-            line-height: 27px;
       }
       @media screen and (min-width: 1920px) {
             font-size: 25px;
-            line-height: 35px;
       }    
   }
 
   @mixin recBox($color, $bgc) {
+      width: 110px;
       color: $color;
       text-align: center;
       font-family: 'Ubuntu', sans-serif;
       font-size: 18px;
       font-weight: bold;
       background-color: $bgc  ;
-      padding: 5px 10px 5px 10px;
+      padding: 5px;
       @media screen and (min-width: 1200px) {
             font-size: 20px;
       }
       @media screen and (min-width: 1920px) {
             font-size: 40px;
+            padding: 10px;
+            width: 200px;
       }
   }
 
   @mixin ovalBox {
       border-radius: 2em;
+      width: 110px;
       color: white;
       text-align: center;
       font-family: 'Ubuntu', sans-serif;
       font-size: 18px;
       font-weight: bold;
       background-color: black;
-      padding: 5px 30px 5px 30px;
+      padding: 5px;
       @media screen and (min-width: 1200px) {
             font-size: 20px;
       }
       @media screen and (min-width: 1920px) {
             font-size: 40px;
+            padding: 10px;
+            width: 200px;
       }
   }
