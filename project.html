@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=PT+Serif:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer type="module" src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script defer type="module" src="js/greetingfromjon.js"></script>
+    <script defer type="module" src="js/main.js"></script>
+
+    <title>Jon Yun</title>
+</head>
+<body>
+    <h1 class="hidden">Welcome to Jon's Portfolio Website</h1>
+    
+    <header class="grid-con" id="main-header">
+        <h2 class="hidden">Top Navigation</h2>
+        <div class="col-span-1 m-col-span-1 l-col-span-1 xl-col-span-1" id="main-logo">
+            <a href="index.html">
+                <img src="images/logo4x.png" alt="logo">
+            </a>
+        </div>
+        <div class="col-span-2 m-col-span-3 l-col-span-3 xl-col-span-3" id="name">
+            <p class="jon">Jon Yun</p>
+        </div>
+        <nav class="col-span-1 m-col-start-6 m-col-end-13 l-col-start-7 l-col-end-13" id="main-nav">
+            <h3 class="hidden">Main Navigation</h3>
+            <button id="button"></button>
+            <div id="burger-con">
+                <ul>
+                    <li><a href="index.html"><span>&#123;</span>Home<span>&#125;</span></a></li>
+                    <li><a href="project.html"><span>&#123;</span>Project<span>&#125;</span></a></li>
+                    <li><a href="about.html"><span>&#123;</span>About<span>&#125;</span></a></li>
+                    <li><a href="contact.php"><span>&#123;</span>Contact<span>&#125;</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 class="hidden">Project - Case Study</h1>
+        <div class="grid-con">
+            <div class="category-title col-span-full">
+                <div class="rec-box">Case Study</div>
+            </div>
+            <div class="col-span-full l-col-start-2">
+                <p class="project-title">
+                    <span class="yellow">&#40;</span>
+                    <span class="pink">&#40;&#41;</span>
+                    <span class="blue">&#61;&#62;</span>
+                    <span class="pink">&#123;</span>
+                    Portfolio Website Development
+                    <span class="pink">&#125;</span>
+                </p>
+            </div>
+            <div class="col-span-full m-col-start-2">
+                <p class="project-sub-title blue" id="project-sub-title-etc">
+                    Creating a visually appealing and technically sound online presence
+                </p>
+            </div>
+        </div>
+        <article class="grid-con">
+            <h2 class="hidden">Overview</h2>
+            <section class="my-role col-span-full m-col-start-2 m-col-end-6">
+                <h3>+ My Role</h3>
+                <p>Design and Layout</p>
+                <p>Content Creation</p>
+                <p>Coding and Development</p>
+            </section>
+            <section class="tools col-span-full m-col-start-6 m-col-end-13">
+                <h3>+ Tools</h3>
+                <p>HTML, CSS, SASS, Javascript, Greensock, PHP</p>
+                <p>Photoshop, Illustrator, Cinema 4D, After Effects</p>
+                <p>Adobe XD, InDesign</p>
+            </section>
+            <section class="period col-span-full m-col-start-2">
+                <h3>+ Period</h3>
+                <p>September ~ December, 2023</p>
+            </section>
+        </article>
+        
+        <article class="grid-con">
+            <h2 class="project-title pink col-span-full">Introduction &nbsp;<span class="blue">&#123;</span></h2>
+            <p class="body-text col-span-full m-col-start-2 m-col-end-12">Embarked on the development of a distinctive junior front-end developer portfolio, emphasizing the challenge of creating a unique identity while maintaining high design quality. The goal was to set the portfolio apart from a web designer’s, showcasing coding skills with a focus on design excellence.</p>
+            <br>
+            <p class="project-title col-span-full m-col-start-2 m-col-end-12"><span class="blue">&#125;</span></p>
+        </article>  
+        <article class="grid-con">
+            <h2 class="project-title pink col-span-full">Background &nbsp;<span class="blue">&#123;</span></h2>
+            <p class="body-text col-span-full m-col-start-2 m-col-end-12">In the context of a rapidly evolving web development landscape, I recognized the importance of establishing a personal portfolio to demonstrate my capabilities. This project unfolded in the dynamic realm of front-end development, where visual aesthetics and user experience play pivotal roles.</p>
+            <br>
+            <p class="project-title col-span-full m-col-start-2 m-col-end-12"><span class="blue">&#125;</span></p>    
+        </article> 
+        
+        <article class="grid-con">
+            <div class="col-span-full">
+                <h2 class="project-title pink">Key Issues and Solutions &nbsp;<span class="blue">&#123;</span></h2>
+                <h3 class="project-sub-title" id="project-sub-title-margin">1. Visual Expression of Front-End Focus</h3>
+            </div>
+            <p class="oval-box col-span-full">Problem</p>
+            <p></p>
+            <p class="oval-box col-span-full">Solution</p>
+
+            <p class="project-title col-span-full m-col-start-2 m-col-end-12"><span class="blue">&#125;</span></p>
+        </article>
+
+        
+    </main>
+
+    <footer class="grid-con">
+        <div class="col-span-full">
+            <p>Copyright @ 2023 Jon Yun. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

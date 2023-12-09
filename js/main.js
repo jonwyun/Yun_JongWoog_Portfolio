@@ -1,4 +1,7 @@
+import {greet} from './greetingfromjon.js'
+
 (() => {
+    greet('Professors')
 
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
@@ -71,6 +74,10 @@
           scrub: 1,
         },
     });
+
+//Movie section
+    const player = new Plyr('video');
+    
 
 
 })();
