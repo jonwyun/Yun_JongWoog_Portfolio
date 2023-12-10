@@ -92,7 +92,7 @@
       scrub: true,
       pin: false,
       pinSpacing: false,
-      markers: true,
+      markers: false,
       anticipatePin: 1
     });
 
