@@ -90,6 +90,8 @@
   @mixin solutionTitle {
       font-size: 16px;
       font-weight: bold;
+      margin-top: 25px;
+      // margin-bottom: 25px;
       @media screen and (min-width: 1200px) {
             font-size: 18px;
       }
@@ -130,6 +132,7 @@
   }
 
   @mixin ovalBox {
+      display: inline-block;
       border-radius: 2em;
       width: 110px;
       color: white;

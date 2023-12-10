@@ -5,7 +5,7 @@
     @include m.projectSubTitle;
 }
 
-#project-sub-title-etc {
+#project-sub-title-align {
     margin-bottom: 15px;
 }
 
@@ -19,12 +19,69 @@
     }
     p {
         margin-left: 22px;
-        margin-bottom: 10px;
         font-size: 15px;
         font-weight: 300; 
     }
 }
 
-#project-sub-title-margin {
+#project-sub-title-margin-1 {
     margin-bottom: 30px;
+}
+
+.solution-body-text {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-weight: 100;
+}
+
+.solution-title {
+    @include m.solutionTitle;
+    
+}
+
+#project-sub-title-margin-2 {
+    margin-bottom: 30px;
+}
+
+#typo-image {
+    background-color: a.$gray;
+    border-radius: 1em 1em 1em 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    margin-bottom: 8px;
+}
+
+#font-type {
+    font-size: 9px;
+}
+
+#ubuntu {
+    font-size: 25px;
+}
+
+#image-overlapping {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100vh;
+}
+
+#bottom-image, #top-image {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+#top-image {
+    z-index: 1; 
 }

@@ -44,22 +44,18 @@ a {
     }
 }
 
-// .hero-main {
-//     height: 100%;
-//     object-fit: cover;
-//     margin-top: 30px;
-// }
-
-.hero-title {
+.m-hero-title {
     text-align: center;
     font-size: 35px;
     font-weight: bold;
+    line-height: 1.2em;
+    margin-bottom: 200px;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-color: a.$blue;
     -webkit-text-stroke-width: 2.00px;
 }
 
-.profile-title {
+.m-profile-title {
     text-align: center;
     .profile-name {
         font-size: 50px;
@@ -84,12 +80,17 @@ a {
     }
 }
 
+
 #hero, #profile {
     display: none;
 }
 
 // Project section
-#menu-title {
+#project-top-margin h2 {
+    margin-top: 40px
+}
+
+.menu-title {
     @include m.menuTitle;
 }
 
@@ -125,6 +126,9 @@ a {
 .blue {
     color: a.$blue;
 }
+.green {
+    color: a.$green;
+}
 
 .body-text {
     @include m.bodyText;
@@ -158,6 +162,9 @@ a {
 
 
 @media screen and (min-width: 768px) {
+    #m-hero, #m-profile {
+        display: none;
+    }
     #desktop-tablet {
         display: grid;
         position: relative;
@@ -171,42 +178,65 @@ a {
         top: 0;
         left: 0;
         width: 100%;
-        height: auto;
+        height: 100vh;
+        background-color: white;
         .grid-con {
             align-items: center;
         }
     }
-    #profile {
+    .hero-main {
+        display: grid;
+        align-items: center;
+        img {
+            justify-self: center;
+        } 
+    }
+    .hero-title {
+        display: grid;
+        align-items: center;
+        text-align: center;
+        font-size: 35px;
+        font-weight: bold;
+        line-height: 1.2em;
+        margin-bottom: 30px;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-color: a.$blue;
+        -webkit-text-stroke-width: 2.00px;
+    }
+    .profile-main {
+        display: grid;
+        align-items: center;
         background-color: white;
         img {
-            height: 320px;
-        }
-
+            width: 60%;
+            justify-self: center;
+        } 
     }
-    #m-hero, #m-profile {
-        display: none;
-    }
-
-    .hero-main {
-        margin-top: 50px;
-    }
+    
     .profile-title {
+        text-align: center;
+        background-color: white;
         .profile-name {
             font-size: 50px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            span {
+                font-weight: bold;
+            }
         }
         .role-1 {
             font-size: 25px;
-            margin-top: 40px;
+            margin-bottom: 10px;
+
         }
         .role-2 {
             font-size: 20px;
-            margin-top: 20px;
         }
     }
     .swing {
         height: 300px;
     }
-    #swing-image {
+    .swing-image {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -237,8 +267,9 @@ a {
             margin-top: 20px;
         }
     }
-    #profile img {
-            height: 420px;
+    .profile-main img {
+            width: 60%;
+            justify-self: center;
     }
     .category-title {
         margin-top: 100px;

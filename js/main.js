@@ -25,17 +25,18 @@ import {greet} from './greetingfromjon.js'
     const mobileIs = window.innerWidth < 768;
 
     if (mobileIs) {
-    const mobileTl = gsap.timeline().from("#m-profile", { opacity: 0, ease:"expo.out" });
+    const mobileTl = gsap.timeline().from("#m-profile", { opacity: 0, ease:"expo.out" })
 
     ScrollTrigger.create({
         animation: mobileTl,
-        trigger: "#mobile",
-        start: "top top",
-        end: "bottom bottom",
+        trigger: "#main-header",
+        start: "top+=10% top",
+        endTrigger: "#mobile",
+        end: "center bottom-=50%",
         scrub: true,
-        pin: true,
+        pin: false,
         pinSpacing: false,
-        markers: false,
+        markers: true,
         anticipatePin: 1
     });
     } else {
@@ -46,11 +47,12 @@ import {greet} from './greetingfromjon.js'
 
     ScrollTrigger.create({
         animation: desktopTl,
-        trigger: "#desktop-tablet",
-        start: "top top",
-        end: "bottom bottom",
+        trigger: "#main-header",
+        start: "top+=10% top",
+        endTrigger: "#desktop-tablet",
+        end: "center bottom-=50%",
         scrub: true,
-        pin: true,
+        pin: false,
         pinSpacing: false,
         markers: true,
         anticipatePin: 1
@@ -78,7 +80,22 @@ import {greet} from './greetingfromjon.js'
 //Movie section
     const player = new Plyr('video');
     
-
+//Project Page - Image
+    const tl = gsap.timeline();
+    tl.from("#top-image", {xPercent: -200, opacity: 0.5})
+  
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: "#project-sub-title-margin-2",
+      start: "top top",
+      endTrigger: "#image-overlapping",
+      end: "center bottom-=50%",
+      scrub: true,
+      pin: false,
+      pinSpacing: false,
+      markers: false,
+      anticipatePin: 1
+    });
 
 })();
 
