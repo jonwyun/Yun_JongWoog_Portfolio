@@ -1,10 +1,9 @@
-import {greet} from './greetingfromjon.js'
+// import { greet } from './greetingfromjon.js';
 
 (() => {
-    greet('Professors')
+    // greet('Professors')
 
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(ScrollToPlugin);
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 //hamburger menu    
     let button = document.querySelector("#button");
@@ -36,7 +35,7 @@ import {greet} from './greetingfromjon.js'
         scrub: true,
         pin: false,
         pinSpacing: false,
-        markers: true,
+        markers: false,
         anticipatePin: 1
     });
     } else {
@@ -54,7 +53,7 @@ import {greet} from './greetingfromjon.js'
         scrub: true,
         pin: false,
         pinSpacing: false,
-        markers: true,
+        markers: false,
         anticipatePin: 1
     });
     }
@@ -82,18 +81,18 @@ import {greet} from './greetingfromjon.js'
     
 //Project Page - Image
     const tl = gsap.timeline();
-    tl.from("#top-image", {xPercent: -200, opacity: 0.5})
+    tl.from(".top-image", {xPercent: -200, opacity: 0.5})
   
     ScrollTrigger.create({
       animation: tl,
       trigger: "#project-sub-title-margin-2",
-      start: "top top",
-      endTrigger: "#image-overlapping",
-      end: "center bottom-=50%",
+      start: "top top+=20%",
+      endTrigger: ".image-overlapping",
+      end: "bottom bottom-=30%",
       scrub: true,
       pin: false,
       pinSpacing: false,
-      markers: false,
+      markers: true,
       anticipatePin: 1
     });
 
