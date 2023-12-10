@@ -65,16 +65,16 @@
         <form class="grid-con" id="form-margin" method="post" action="sendmail.php">
 
             <label class="label-box col-span-2 m-col-start-2 m-col-end-5" for="first_name">First Name </label>
-            <input class="input-box col-span-2 m-col-start-5 m-col-end-12" type="text" name="first_name" id="first_name">
+            <input class="input-box col-span-2 m-col-start-5 m-col-end-12" type="text" name="first_name" id="first_name" placeholder="Your First Name">
 
             <label class="label-box col-span-2 m-col-start-2 m-col-end-5" for="last_name">Last Name </label>
-            <input class="input-box col-span-2 m-col-start-5 m-col-end-12" type="text" name="last_name" id="last_name">
+            <input class="input-box col-span-2 m-col-start-5 m-col-end-12" type="text" name="last_name" id="last_name" placeholder="Your Last Name">
 
             <label class="label-box col-span-2 m-col-start-2 m-col-end-5" for="email">Email </label>
-            <input class="input-box col-span-2 m-col-start-5 m-col-end-12" type="text" name="email" id="email">
+            <input class="input-box col-span-2 m-col-start-5 m-col-end-12" type="text" name="email" id="email" placeholder="abc@example.com">
 
             <label class="label-box col-span-2 m-col-start-2 m-col-end-5" for="comments">Comments</label>
-            <textarea class="input-box col-span-2 m-col-start-5 m-col-end-12" name="comments" id="comments">Comment here</textarea>
+            <textarea class="input-box col-span-2 m-col-start-5 m-col-end-12" name="comments" id="comments" placeholder="Please leave your message"></textarea>
 
             <input class="oval-box col-span-full" type="submit" value="Send" id="send-btn">
 

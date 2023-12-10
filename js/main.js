@@ -68,7 +68,7 @@
         ],
         ease: "none",
         scrollTrigger: {
-          trigger: ".project-title",
+          trigger: ".swing-trigger",
           start: "top center",
           end: "bottom top",
           markers: false,
@@ -85,14 +85,14 @@
   
     ScrollTrigger.create({
       animation: tl,
-      trigger: "#project-sub-title-margin-2",
+      trigger: ".scroll-trigger-2",
       start: "top top+=20%",
       endTrigger: ".image-overlapping",
       end: "bottom bottom-=30%",
       scrub: true,
       pin: false,
       pinSpacing: false,
-      markers: false,
+      markers: true,
       anticipatePin: 1
     });
 

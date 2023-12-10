@@ -65,25 +65,39 @@
   @mixin projectTitle {
       font-size: 18px;
       font-weight: bold;
+      margin-top: 40px;
+      margin-bottom: 30px;
       @media screen and (min-width: 768px) {
             font-size: 25px;
+            margin-top: 50px;
+            margin-bottom: 40px;
       }
       @media screen and (min-width: 1200px) {
             font-size: 35px;
+            margin-top: 60px;
+            margin-bottom: 50px;
       }
       @media screen and (min-width: 1920px) {
-            font-size: 45px;
+            font-size: 55px;
+            margin-top: 70px;
+            margin-bottom: 60px;
       }
   }
 
   @mixin projectSubTitle {
       font-size: 18px;
       font-weight: 400;
+      margin-top: 25px;
+      margin-bottom: 20px;
       @media screen and (min-width: 1200px) {
-            font-size: 20px;
+            font-size: 25px;
+            margin-top: 35px;
+            margin-bottom: 30px;
       }
       @media screen and (min-width: 1920px) {
-            font-size: 40px;
+            font-size: 35px;
+            margin-top: 45px;
+            margin-bottom: 40px;
       }
   }
 
@@ -91,12 +105,16 @@
       font-size: 16px;
       font-weight: bold;
       margin-top: 25px;
-      // margin-bottom: 25px;
+      margin-bottom: 20px;
       @media screen and (min-width: 1200px) {
             font-size: 18px;
+            margin-top: 35px;
+            margin-bottom: 25px;
       }
       @media screen and (min-width: 1920px) {
             font-size: 30px;
+            margin-top: 45px;
+            margin-bottom: 30px;
       }
   }
 
@@ -134,7 +152,7 @@
   @mixin ovalBox {
       display: inline-block;
       border-radius: 2em;
-      width: 110px;
+      width: 130px;
       color: white;
       text-align: center;
       font-family: 'Ubuntu', sans-serif;
@@ -142,12 +160,22 @@
       font-weight: bold;
       background-color: black;
       padding: 5px;
+      margin-top: 25px;
+      margin-bottom: 20px;
+      @media screen and (min-width: 768px) {
+            width: 150px;
+      }
       @media screen and (min-width: 1200px) {
             font-size: 20px;
+            margin-top: 35px;
+            margin-bottom: 30px;
+            width: 170px;
       }
       @media screen and (min-width: 1920px) {
             font-size: 30px;
             padding: 10px;
-            width: 200px;
+            width: 220px;
+            margin-top: 45px;
+            margin-bottom: 40px;
       }
   }
