@@ -56,22 +56,37 @@
 
 #font-type {
     font-size: 9px;
+    @media screen and (min-width: 1920px) {
+        font-size: 11px;
+    }
 }
 
 #ubuntu {
     font-size: 25px;
+    @media screen and (min-width: 1200px) {
+        font-size: 45px;
+    }
+    @media screen and (min-width: 1920px) {
+        font-size: 55px;
+    }
 }
 
-#image-overlapping {
+.image-overlapping {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%; 
-    height: 100vh;
+    height: 50vh;
+    @media screen and (min-width: 1200px) {
+        height: 60vh
+    }
+    @media screen and (min-width: 1920px) {
+        font-size: 80vh;
+    }
 }
 
-#bottom-image, #top-image {
+.bottom-image, .top-image {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -79,9 +94,56 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 50%;
+    height: auto;
+    img {
+        width: 500px;
+        @media screen and (min-width: 1200px) {
+            width: 600px
+        }
+        @media screen and (min-width: 1920px) {
+            width: 700px
+        }
+    }
 }
 
-#top-image {
+.top-image {
     z-index: 1; 
+    background-color: white;
+}
+
+#project-sub-title-margin-3 {
+    margin-bottom: 30px;
+}
+
+#project-nav .oval-box {
+    width: 150px;
+}
+
+#project-nav {
+    text-align: center;
+}
+
+.rec-box-white {
+    border: solid 1px black;
+    width: 110px;
+    color: black;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    padding: 5px;
+    margin-right: 10px;
+    @media screen and (min-width: 1200px) {
+          font-size: 20px;
+    }
+    @media screen and (min-width: 1920px) {
+          font-size: 30px;
+          padding: 10px;
+          width: 200px;
+    }
+}
+
+#project-bottom-nav-right {
+    justify-self: end;
 }
